@@ -28,14 +28,15 @@
   },
   "homepage": "https://github.com/chcokr/remark-lint-sentence-newline#readme",
   "dependencies": {
-    "unist-util-visit": "^1.0.0"
+    "unist-util-visit": "^1.0.0",
+    "vfile-location": "^2.0.0"
   },
   "devDependencies": {
     "coveralls": "^2.11.6",
     "istanbul": "^0.4.1",
     "mocha": "^2.3.4",
     "mocha-lcov-reporter": "^1.0.0",
-    "remark": "^3.1.0",
-    "remark-lint": "^2.0.0"
+    "remark": "^4.2.2",
+    "remark-lint": "^3.2.1"
   }
 }

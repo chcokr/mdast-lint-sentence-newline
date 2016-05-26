@@ -1,6 +1,8 @@
 var visit = require('unist-util-visit');
+var vfileLocation = require('vfile-location');
 
 function sentenceNewline(ast, file, preferred, done) {
+  var location = vfileLocation(file);
   var blacklist = [];
   if (typeof preferred === 'object' && !('length' in preferred)) {
     blacklist = preferred.blacklist;
@@ -63,7 +65,7 @@ function sentenceNewline(ast, file, preferred, done) {
 
       file.warn(
         'Newline should follow end of sentence',
-        file.offsetToPosition(file.positionToOffset(node.position.start) + lastCandidate.index)
+        location.toPosition(location.toOffset(node.position.start) + lastCandidate.index)
       );
     }
 
